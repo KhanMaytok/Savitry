@@ -22,17 +22,6 @@
         <meta name="text:Disqus shortname" content="">
         <meta name="text:Google analytics ID" content="">
         {/block:Hidden}
-        
-        {block:IndexPage}
-            <meta property="og:image" content="{PortraitURL-128}" />
-            <meta property="og:title" content="{Title}" />
-            <meta property="og:type" content="blog" />
-            <meta property="og:url" content="YOUR_SITE_URL" />
-        {/block:IndexPage}
-        
-        {block:PostSummary}
-            <meta property="og:title" content="{PlaintextPostSummary}" />
-        {/block:PostSummary}
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="theme-color" content="#35465D">
@@ -46,6 +35,55 @@
         <meta property="fb:admins" content="FACEBOOK_USERID" />
         <meta property="og:description" content="{MetaDescription}" />
         <meta property="og:locale" content="en_US" />
+
+        {block:IndexPage}
+            <meta property="og:image" content="{PortraitURL-128}" />
+            <meta property="og:title" content="{Title}" />
+            <meta property="og:type" content="blog" />
+            <meta property="og:url" content="YOUR_SITE_URL" />
+        {/block:IndexPage}
+
+        {block:PostSummary}
+            <meta property="og:title" content="{PlaintextPostSummary}" />
+        {/block:PostSummary}
+
+        <!-- Open Graph tags to customize your permalinks. -->
+        {block:Permalink}
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="{Permalink}" />
+            {block:Posts}
+                {block:Text}
+                    <meta property="og:image" content="http://static.tumblr.com/vswwmyc/mmHla8c7g/text.png"/>
+                {/block:Text}
+                {block:Photo}
+                    <meta property="og:image" content="{PhotoURL-500}"/>
+                {/block:Photo}
+                {block:Photoset}
+                    <meta property="og:image" content="http://static.tumblr.com/vswwmyc/ACBla8cb5/photo.png"/> 
+                {/block:Photoset}
+                {block:Quote}
+                    <meta property="og:image" content="http://static.tumblr.com/vswwmyc/kahla8ccw/quote.png"/>
+                {/block:Quote}
+                {block:Link}
+                    <meta property="og:image" content="http://static.tumblr.com/vswwmyc/K6Vla8cek/link.png"/>
+                {/block:Link}
+                {block:Chat}
+                    <meta property="og:image" content="http://static.tumblr.com/vswwmyc/9Ysla8cgl/chat.png"/>
+                {/block:Chat}
+                {block:Video}
+                    <meta property="og:image" content="http://static.tumblr.com/vswwmyc/KiUla8chx/video.png"/>
+                {/block:Video}
+                {block:Audio}
+                    <meta property="og:image" content="http://static.tumblr.com/vswwmyc/FyZla8c36/audio.png"/>
+                {/block:Audio}
+                {block:Answer}
+                    <meta property="og:image" content="{AskerPortraitURL-128}"/>
+                {/block:Answer}
+            {/block:Posts}
+        {/block:Permalink}
+        <!-- /Open Graph tags for your home page (index). -->
+        
+        
 
         <link rel="stylesheet" href="http://static.tumblr.com/qexbavb/ZpSodrpj0/main-min.css">
         {block:IfSyntaxHighlighting}
