@@ -22,12 +22,30 @@
         <meta name="text:Disqus shortname" content="">
         <meta name="text:Google analytics ID" content="">
         {/block:Hidden}
+        
+        {block:IndexPage}
+            <meta property="og:image" content="{PortraitURL-128}" />
+            <meta property="og:title" content="{Title}" />
+            <meta property="og:type" content="blog" />
+            <meta property="og:url" content="YOUR_SITE_URL" />
+        {/block:IndexPage}
+        
+        {block:PostSummary}
+            <meta property="og:title" content="{PlaintextPostSummary}" />
+        {/block:PostSummary}
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="theme-color" content="#35465D">
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        
+        <!-- Open Graph tags for your home page (index). -->
+        <meta property="og:site_name" content="{Title}" />
+        <meta property="fb:app_id" content="FACEBOOK_APPID"/>
+        <meta property="fb:admins" content="FACEBOOK_USERID" />
+        <meta property="og:description" content="{MetaDescription}" />
+        <meta property="og:locale" content="en_US" />
 
         <link rel="stylesheet" href="http://static.tumblr.com/qexbavb/ZpSodrpj0/main-min.css">
         {block:IfSyntaxHighlighting}
